@@ -63,7 +63,7 @@ $(function() {
          */
          it ('element is hidden by default', function() {
             // console.log(document.body); // check its elements
-            expect(document.body.className).toBe("menu-hidden");
+            expect(document.body.className).toBe('menu-hidden');
          });
 
          /* TODO: Write a test that ensures the menu changes
@@ -72,9 +72,10 @@ $(function() {
           * clicked and does it hide when clicked again.
           */
           it ('changes visibility when the menu icon is clicked', function(){
-           // $('.menu-icon-link').trigger('click');
-            //expect(document.body.className).toBe('menu-hidden');
-            expect().toBe();
+            expect(document.body.classList.contains('menu-hidden')).toBe(true);
+            $('.menu-icon-link').trigger('click');
+
+            //expect().toBe();
           });
     });
 
