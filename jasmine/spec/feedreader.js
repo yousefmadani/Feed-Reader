@@ -62,8 +62,8 @@ $(function() {
          * hiding/showing of the menu element.
          */
          it ('element is hidden by default', function() {
-            console.log(document.body); // check its elements
-            expect(document.body.classList).toBe(menu-hidden);
+            // console.log(document.body); // check its elements
+            expect(document.body.className).toBe('menu-hidden');
          });
 
          /* TODO: Write a test that ensures the menu changes
