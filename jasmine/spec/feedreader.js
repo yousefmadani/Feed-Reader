@@ -72,10 +72,15 @@ $(function() {
           * clicked and does it hide when clicked again.
           */
           it ('changes visibility when the menu icon is clicked', function(){
-            expect(document.body.classList.contains('menu-hidden')).toBe(true);
-            $('.menu-icon-link').trigger('click');
 
-            //expect().toBe();
+
+            //---------- Check if menu opens when clicked ----------
+            $('.menu-icon-link').trigger('click');
+            expect(document.body.classList.contains('menu-hidden')).toBe(false);
+
+            //---------- Check if menu closes when clicked ----------
+            $('.menu-icon-link').trigger('click');
+            expect(document.body.classList.contains('menu-hidden')).toBe(true);
           });
     });
 
