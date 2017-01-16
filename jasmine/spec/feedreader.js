@@ -106,6 +106,8 @@ $(function() {
 
             // ---------- from the documentation: expect(value).toBeGreaterThan(0);----------
             var entryClassName = document.getElementsByClassName('entry');
+            // console.log(entryClassName); //check
+
             expect(entryClassName.length).toBeGreaterThan(0);
             done();
          });
@@ -118,21 +120,21 @@ $(function() {
         var firstLoadFeed, secondLoadFeed;
 
           beforeEach(function(done) {
-            loadFeed(0, done);{
+            loadFeed(0, function(){
     firstLoadFeed = document.getElementsByClassName('feed');
-}
+                       console.log(firstLoadFeed); //check
+  done();
+});
 
-    loadFeed(1, done);
-    secondLoadFeed = document.getElementsByClassName('feed');
-  });
-          console.log(firstLoadFeed);
+         });
 
         /* TODO: Write a test that ensures when a new feed is loaded
          * by the loadFeed function that the content actually changes.
          * Remember, loadFeed() is asynchronous.
          */
          it ('ensures when a new feed is loaded by loadFeed() and that the content changed', function(){
-            expect(firstLoadFeed).not.toEqual(secondLoadFeed);
-         });
+  });
+
+          //  expect(firstLoadFeed).not.toEqual(secondLoadFeed);
     });
 }());
