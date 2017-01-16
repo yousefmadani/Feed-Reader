@@ -111,11 +111,15 @@ $(function() {
          });
     });
 
-
     /* TODO: Write a new test suite named "New Feed Selection" */
     describe('New Feed Selection', function(){
+
+        // ---------- assign two variables ----------
+        var firstLoadFeed, secondLoadFeed;
+
           beforeEach(function(done) {
-    loadFeed(0, done);
+    firstLoadFeed = loadFeed(0, done);
+    secondLoadFeed = loadFeed(1, done);
   });
 
         /* TODO: Write a test that ensures when a new feed is loaded
@@ -123,7 +127,7 @@ $(function() {
          * Remember, loadFeed() is asynchronous.
          */
          it ('ensures when a new feed is loaded by loadFeed() and that the content changed', function(){
-
+            expect(firstLoadFeed).not.toEqual(secondLoadFeed);
          });
     });
 }());
