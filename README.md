@@ -30,3 +30,4 @@ Alternatively, it can be accessed here: https://yousefmadani.github.io/Feed-Read
 - [jQuery .html()](http://api.jquery.com/html/)
 - [Udacity's Feed Reader discussion forums](https://discussions.udacity.com/c/nd001-feed-reader-testing)
 - [JS beautifier](http://jsbeautifier.org/)
+- stackoverflow [JQuery html() vs. innerHTML](http://stackoverflow.com/questions/3563107/jquery-html-vs-innerhtml)
