@@ -89,6 +89,13 @@ $(function() {
     /* TODO: Write a new test suite named "Initial Entries" */
     describe('Initial Entries', function() {
 
+  beforeEach(function(done) {
+    setTimeout(function() {
+      value = 0;
+      done();
+    }, 1);
+  });
+
         /* TODO: Write a test that ensures when the loadFeed
          * function is called and completes its work, there is at least
          * a single .entry element within the .feed container.
@@ -97,10 +104,10 @@ $(function() {
          */
 
          // ---------- By default jasmine will wait for 5 seconds for an asynchronous spec to finish before causing a timeout failure. ----------
-         it ('ensures that the loadFeed function is called and completes its work', function(){
-            beforeEach(function(done){
 
-            });
+         it ('ensures that the loadFeed function is called and completes its work', function(done){
+            expect(loadFeed()).toBe(0);
+            done();
          });
     });
 
