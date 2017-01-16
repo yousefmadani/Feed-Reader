@@ -105,8 +105,8 @@ $(function() {
             // ---------- we expect a single .entry element within the .feed container ----------
 
             // ---------- from the documentation: expect(value).toBeGreaterThan(0);----------
-
-            expect(document.getElementsByClassName('.entry')).toBeGreaterThan(0);
+            var entryClassName = document.getElementsByClassName('entry');
+            expect(entryClassName.length).toBeGreaterThan(0);
             done();
          });
     });
