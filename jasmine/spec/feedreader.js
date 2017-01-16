@@ -21,7 +21,7 @@ $(function() {
 
         /* A test that loops through each feed
          * in the allFeeds object and ensures it has a URL defined and that the URL is not empty. */
-        it('contains a URL and that it is not empty and has correct formatting', function() {
+        it('contains a URL and that it is not empty', function() {
 
             var len = allFeeds.length; //define length so loop doesnt inquire everytime
             for (var i = 0; i < len; i++) {
