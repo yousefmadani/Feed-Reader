@@ -133,8 +133,13 @@ $(function() {
          * Remember, loadFeed() is asynchronous.
          */
          it ('ensures when a new feed is loaded by loadFeed() and that the content changed', function(){
+            loadFeed(1, function(){
+                secondLoadFeed = document.getElementsByClassName('feed');
+                console.log(firstLoadFeed);
+                done();
+            });
   });
 
-          //  expect(firstLoadFeed).not.toEqual(secondLoadFeed);
+          expect(firstLoadFeed).not.toEqual(secondLoadFeed);
     });
 }());
