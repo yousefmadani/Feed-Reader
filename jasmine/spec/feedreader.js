@@ -98,28 +98,26 @@ $(function() {
     /* "New Feed Selection" test suite */
     describe('New Feed Selection', function() {
 
+        /* A test that ensures when a new feed is loaded
+         * by the loadFeed function that the content actually changes.*/
         // ---------- assign two variables ----------
         var firstLoadFeed, secondLoadFeed;
 
         beforeEach(function(done) {
             loadFeed(0, function() {
-                firstLoadFeed = document.getElementsByClassName('feed');
-                // console.log(firstLoadFeed); //check
-
+                firstLoadFeed = $('.feed').html();
+                console.log(firstLoadFeed); //check
+                loadFeed(1, function() {
+                secondLoadFeed = $('.feed').html();
+                console.log(secondLoadFeed); //check
                 done();
             });
-
         });
+                    });
 
-        /* A test that ensures when a new feed is loaded
-         * by the loadFeed function that the content actually changes.*/
-        it('ensures when a new feed is loaded by loadFeed() and that the content changed', function(done) {
-            loadFeed(1, function() {
-                secondLoadFeed = document.getElementsByClassName('feed');
-                // console.log(secondLoadFeed); //check
-                done();
-            });
+
+        it('ensures when a new feed is loaded by loadFeed() and that the content changed', function() {
             expect(secondLoadFeed).not.toEqual(firstLoadFeed);
-        });
+            });
     });
 }());
