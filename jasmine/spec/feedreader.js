@@ -118,9 +118,14 @@ $(function() {
         var firstLoadFeed, secondLoadFeed;
 
           beforeEach(function(done) {
-    firstLoadFeed = loadFeed(0, done);
-    secondLoadFeed = loadFeed(1, done);
+            loadFeed(0, done);{
+    firstLoadFeed = document.getElementsByClassName('feed');
+}
+
+    loadFeed(1, done);
+    secondLoadFeed = document.getElementsByClassName('feed');
   });
+          console.log(firstLoadFeed);
 
         /* TODO: Write a test that ensures when a new feed is loaded
          * by the loadFeed function that the content actually changes.
