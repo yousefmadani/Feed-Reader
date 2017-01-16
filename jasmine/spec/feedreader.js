@@ -106,18 +106,17 @@ $(function() {
         beforeEach(function(done) {
             loadFeed(0, function() {
                 firstLoadFeed = $('.feed').html();
-                console.log(firstLoadFeed); //check
+                // console.log(firstLoadFeed); //check
                 loadFeed(1, function() {
-                secondLoadFeed = $('.feed').html();
-                console.log(secondLoadFeed); //check
-                done();
+                    secondLoadFeed = $('.feed').html();
+                    // console.log(secondLoadFeed); //check
+                    done();
+                });
             });
         });
-                    });
-
 
         it('ensures when a new feed is loaded by loadFeed() and that the content changed', function() {
             expect(secondLoadFeed).not.toEqual(firstLoadFeed);
-            });
+        });
     });
 }());
