@@ -15,7 +15,7 @@ The project required tests for (RSS Feed testing, RSS Feed properties, menu defa
 
 - [Jasmine](https://jasmine.github.io/)
 - [Jasmine 2.2 documentation](https://jasmine.github.io/2.2/introduction)
--[jasmine JS testing Cheat Sheet](https://www.cheatography.com/citguy/cheat-sheets/jasmine-js-testing/)
+- [jasmine JS testing Cheat Sheet](https://www.cheatography.com/citguy/cheat-sheets/jasmine-js-testing/)
 - [Mozilla Element.className](https://developer.mozilla.org/en-US/docs/Web/API/Element/className)
 - stackoverflow [Testing a click event with Jasmine that appends a style sheet to the head] (http://stackoverflow.com/questions/10823790/testing-a-click-event-with-jasmine-that-appends-a-style-sheet-to-the-head)
 - [jQuery .trigger()](http://api.jquery.com/trigger/)
