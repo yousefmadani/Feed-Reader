@@ -10,6 +10,7 @@ The project required tests for (RSS Feed testing, RSS Feed properties, menu defa
 2. Unzip the file.
 3. Run index.html in your desired browser.
 
+Alternatively, it can be accessed here: https://yousefmadani.github.io/Feed-Reader/
 
 ## Resources used:
 
